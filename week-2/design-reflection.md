@@ -1,6 +1,6 @@
 # 2.3 Introduction to Design and Site Planning
 
-![Alt text](/imgs/site-map.png "Site Map")
+![Site Map](/phase-0/week-2/imgs/site-map.png)
 
 ## What are the 6 Phases of Web Design?
 1. Information Gathering
