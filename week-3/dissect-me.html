@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
+    <meta charset="UTF-8">
     <title>Version Control, Git, and GitHub</title>
   </head>
   <body>
     <main>
-      <header>
-        <h1>Introduction to Version Control, Git, and GitHub</h1>
-        <h4>February 17th, 2016</h4>
-      </header>
-      <section>
+      <article>
+        <header>
+          <h1>Introduction to Version Control, Git, and GitHub</h1>
+          <h2>February 17th, 2016</h2>
+        </header>
         <!-- What are the benefits of version control? -->
         <p>
           Version control allows a developer to view the entire history of revisions to one or more files and merge revisions made by different people. It is a essential tool in the developers toolbox because version control has many benefits to help developers grow their code. One benefit of version control is that files can be sent to other developers for them to modify. After they have made changes to the file, the file can be merged back into the original project. Another benefit of version control is that it tracks all of the changes made within the project. A developer can view information regarding changes and merges to the project. One last benefit of version control is the developer can rollback a file if need be. This is often useful when a developer detects a bug in the code to which he can simply rollback to a previous saved point. These are three of the biggest benefits that version control provides to a developer.
@@ -24,10 +25,13 @@
           GitHub is a cloud-based repository management service. GitHub is an addition to git to help keep code safe. Although you may be using git within your project to track changes and have the safety of the rollback feature of version control, your project is still not safe. Life is unpredictable and your project can disappear if your computer is stolen, damaged, or malfunctions. GitHub allows your repositories to live in the cloud. It allows the cloud to have a copy of your repository so that you and other developers can remotely access that copy at anytime.
           Not only does GitHub keep your code safe and stored on the cloud but it also has some very helpful features for developers. GitHub provides a easy method of collaborating on projects with team members. Instead of exchanging modified code amongst team members (which can get messy really quick), GitHub allows developers to push and pull code to and from the remote repository in the cloud in real time. Another helpful feature of GitHub is the ability to fork and clone repositories. If you want to collaborate on a project with another developer, cloning a repository onto your local computer and pushing the changes would be ideal. If you want to move in a different direction with the code, you can fork the code, which simply means that you can create a copy of the repository onto your GitHub profile. These are just two of the big features that developers can benefit by storing their code on GitHub.
         </p>
-      </section>
+      </article>
     </main>
     <footer>
-    <a href ="#">Social networking stuff</a>
+      <a href="#"><img src="#" alt="Twitter"></a>
+      <a href="#"><img src="#" alt="Facebook"></a>
+      <a href="#"><img src="#" alt="GitHub"></a>
+      <a href="#"><img src="#" alt="Stack Overflow"></a>
     </footer>
   </body>
 </html>
@@ -35,22 +39,16 @@
 <!--
 1. What HTML5 tags have you used in this challenge and continue to return to often? Why?
 
-
+As you can see from the html5 code above, I used <main>, <article>, <header>, and <footer> in this challenge. These new html5 elements help me section content elements with easy compared to the alternative <div> tag. These elements help me section content into logical pieces. The <main> tag represents the main content within the body. It allows users to focus on that content as opposed to other content on the page. The <article> tag is used for content that can stand independently on its own page. If the contents of the tag were taken, it would be fully understandable and reusable on its own. The <header> tag usual contains navigational links and logos and headers for a website. Similarly, a <footer> tag is located inside the body and displays the last information on the site, typically social media links and copyrights. I return to these html5 elements again and again because they allow me to organize and visualize my code with ease. The semantic markup communicates the purpose of the element clearly to me making the development process easier.
 
 2. How do elements get laid out on a page? What is the order the browser uses to display elements?
 
+Elements on a page are either block elements or inline elements. Block elements stack on top of each other and occupy the whole space of the parent container. Inline elements fit and wrap with the text. Inline elements only occupy the space between the tags. 
+In regards to the browser, I believe the browser displays elements from top to bottom. It goes through each block element starting from the top and interprets the tags to display the content in the correct manner. The browser also goes through each line within a parent tag and looks for inline elements to display depending on the tags. This is the reason why the html document needs to start with <!DOCTYPE html> to tell the browser that the document is using html5. We also need to include the <charset> tag right after the <head> tag so the browser can interpret the rest of the characters included in the file. Including these tags at the bottom of the file would mean that the browser would look at them last and it wouldn't be able to process the information that came before it.
 
+3. What did you learn about Sublime in this challenge? Do you think you'll create more handy snippets at a later date? What about research some shortcuts that already exist?
 
-3. What did you learn about Sublime in this challenge? 
-
-
-
-4. Do you think you'll create more handy snippets at a later date?
-
-
-
-5. snippets at a later date? What about research some shortcuts that already exist?
-
-
+I learned a lot of new information about Sublime in this challenge. First, I learned about snippets that already come with Sublime. I always wondered how using tab to auto complete elements worked. Now I know that preexisting snippets are on Sublime to allow me to save time but using tab instead of typing out each element. Second, I learned how to create my own snippets. In this challenge, we created a snipped with the <charset> tag added onto the html snippet. This way, each time I begin a html page, I can save time by using the html5 snippet, complete with the <charset> tag. I'll definitely use this trick in the future to create new snippets to save time. As they said, snippets can created for anything to save time, and I intend to use it.
+As for Sublime shortcuts, I researched a two that I liked. The first shortcut that I found useful is to use the F6 key to spell check. While typing up these reflections, I misspell many words. To help me check for these misspellings I can simply hit the F6 key to activate spell check. The second shortcut/trick is to change my layout to two column. This allows me to see two files at the same time. I feel like this will be useful to me in the future when looking at my html file and my css file side by side.
 
 -->
