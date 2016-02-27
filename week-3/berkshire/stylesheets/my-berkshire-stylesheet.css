@@ -1,0 +1,107 @@
+body {
+	color:#000080;
+	background-color: #ffffff;
+}
+
+a:link {
+	color: #800080;
+}
+
+a:visited {
+	color: #ff0000;
+}
+
+.column1 {
+	float: left;
+	width: 500px;
+	margin: 40px;
+	margin-top: 0px;
+}
+
+.column2 {
+	float: left;
+	width: 500px;
+	margin: 40px;
+	margin-top: 0px;
+}
+
+span {
+	font-size: 10px;
+}
+
+header {
+	font-weight: bold;
+	text-align: center;
+	font-size: 13px;
+	border-bottom: 1px solid gray;
+	padding-bottom: 12px;
+}
+
+h1 {
+	font-size: 16px;
+	margin-bottom: 0px;
+}
+
+.capital {
+	font-size: 35px;
+}
+
+.heading {
+	font-size: 15px;
+}
+
+.geico {
+	margin-top: 400px;
+	padding-top: 15px;
+	border-top: 1px solid gray;
+	text-align: center;
+	font-size: 10px;
+	border-bottom: 1px solid gray;
+	padding-bottom: 10px;
+}
+
+li {
+	margin-top: 20px;
+}
+
+footer {
+	border-top: 1px solid gray;
+	padding-top: 15px;
+}
+
+.copyright {
+	font-size: 10px;
+}
+
+.berk {
+	font-weight: bold;
+}
+
+.contact {
+	font-size: 13px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*
+1. What is important to know when linking an external file (like a stylesheet) to an HTML file?
+
+When linking a file, such as CSS, to an HTML file, we need to be aware of three attributes. The file must rest instead the <head> tag and should include a  type, rel, and href attribute. The type attribute should be equal to "text/css" for CSS or the type of file being imported into HTML. The rel attribute should be equal to "stylesheet" for CSS or the relation of the file to the HTML. Finally, the href attribute should point to the address of the CSS file or any file you're importing into html. Following this procedure will ensure that a developer can link external files to an HTML file. 
+
+2. What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+Since the Berkshire Hathaway website has all of the links set up in two columns, I decided to set my clone to have two columns using the float property. I separated the two lists of links into <div> tags. Then I styled the <div> tags to float to the left and styled the width to be 500px. This way the width of the divs would take up approximately half of the page producing two columns like the Berkshire website displays. As for the positioning of the other elements, I used text-align to align the text to the center. One element that I had difficulty positioning were the line breaks and positioning them further away from the text. As seen in the Berkshire site, the line breaks and text have some space in between them. To get my clone to look the same, I experimented with the padding of my elements to push the border further away (make some space between the context and border). This seemed to do the trick but I feel like there are better solutions to the problem. For the most part, I styled my clone site to be pretty accurate to the actual Berkshire site. There are a few differences, such as the spacing between the listed links> I'll keep working with CSS to see how I can properly adjust each link. 
+
+3. What CSS did you use to modify the element style (like size, color, etc.)
+
+I used a lot of different properties to modify my elements. I used color, font-size, font-weight, border, margin-top, margin-bottom, float, width, padding-top, and padding-bottom. These were the essential styles that I used repeatedly to recreate the Berkshire website. Most of these are basic properties within CSS but I had to reread for a few of them such as float, padding, and border to correctly use them. 
+
+4. Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+
+I definitely felt like utilizing classes and ids were necessary to style the CSS effectively. Good practice suggests that we style html files in a different file and to connect the elements to styling in the CSS file, I believe classes and ids are necessary. Good practice also suggests that classes be utilized the most due to their ability to be used on multiple elements. Although IDs are higher on the hierarchy scale, classes can be utilized with many elements making them the preferred choice. I mostly used classes within my CSS to style my elements. For the problems that instructed us to style the whole page or a considerable amount of the page, I used tags because they were more broad then classes and we wouldn't have to add classes to each element. Once the styling got more specific and narrow, I included classes within my html elements and styled them in my CSS file. This is due to the fact that it's more efficient then styling each element in html and instead we can style elements in groups at once. It also beats styling all of your elements in the html file under the <style> tag nested inside <head>.
+
+5. When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+After completing my site, I used Chrome DevTools to inspect both the Berkshire website and my clone. It is clear that the actual Berkshire website has the cleaner code. I say this as I click through the elements on each website. The Berkshire site usual has one or two selectors styling each element and the elements are nested nicely so there are no overlapping properties. In my site, I have multiple selectors for each element, and often times the properties are overriding each other. In general, I may be bias because I don't know how to read the code that well yet, but Berkshires code looks cleaner. I have many different inherited code while Berkshire doesn't have many. I feel like they mapped out all of their elements and the styling for each so they made sure that each element was specifically catered to do a job. For me, I completed the challenge without regards to how to the code will look or if I could "double-dip" and use a class for multiple elements. I believe with more practice, I'll get better at creating organized code.
+
+*/
