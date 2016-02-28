@@ -1,14 +1,14 @@
 # 3.4 Chrome DevTools
 
-![Challenge-1](/imgs/Challenge-1.png)
-![Challenge-2](/imgs/Challenge-2.png)
-![Challenge-3](/imgs/Challenge-3.png)
-![Challenge-4](/imgs/Challenge-4.png)
-![Challenge-5](/imgs/Challenge-5.png)
-![Challenge-6](/imgs/Challenge-6.png)
-![Challenge-7](/imgs/Challenge-7.png)
-![Challenge-8](/imgs/Challenge-8.png)
-![Challenge-9](/imgs/Challenge-9.png)
+![Challenge-1](imgs/Challenge-1.png)
+![Challenge-2](imgs/Challenge-2.png)
+![Challenge-3](imgs/Challenge-3.png)
+![Challenge-4](imgs/Challenge-4.png)
+![Challenge-5](imgs/Challenge-5.png)
+![Challenge-6](imgs/Challenge-6.png)
+![Challenge-7](imgs/Challenge-7.png)
+![Challenge-8](imgs/Challenge-8.png)
+![Challenge-9](imgs/Challenge-9.png)
 
 ## How can you use Chrome's DevTools inspector to help you format or position elements?
 
