@@ -29,7 +29,9 @@ Minutes in a Decade
 ## Challenge Solutions
 
 Defining Variables: https://github.com/Kunal57/phase-0/blob/4.2/week-4/defining-variables.rb
+
 Simple String Methods: https://github.com/Kunal57/phase-0/blob/4.2/week-4/simple-string.rb
+
 Local Variables and Basic Arithmetical Operations: https://github.com/Kunal57/phase-0/blob/4.2/week-4/basic-math.rb
 
 ## How does Ruby handle addition, subtraction, multiplication, and division of numbers?
