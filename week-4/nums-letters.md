@@ -26,6 +26,12 @@ Minutes in a Decade
 	puts (60*24)*365*10
 ```
 
+## Challenge Solutions
+
+Defining Variables: https://github.com/Kunal57/phase-0/blob/4.2/week-4/defining-variables.rb
+Simple String Methods: https://github.com/Kunal57/phase-0/blob/4.2/week-4/simple-string.rb
+Local Variables and Basic Arithmetical Operations: https://github.com/Kunal57/phase-0/blob/4.2/week-4/basic-math.rb
+
 ## How does Ruby handle addition, subtraction, multiplication, and division of numbers?
 
 Ruby handles basic arithmetic like a normal calculator. The main difference being the use of integers and floats as inputs. Unlike a calculator, Ruby will return the value of the expression you inputted with the type of input values you used. If you used integers, Ruby will return the value in integer format. This means that in a division problem, no decimals will be shown and instead the number will be rounded down to the nearest whole number. For floats, the results will be displayed with decimal points even if none are needed. For example, dividing two floats like 4.0/2.0 will result in the value of 2.0, as a result of the two inputs being in a float format. Other than this big difference, Ruby handles arithmetic similar to a basic calculator. Also spaces don't matter between integer/floats/signs. 
