@@ -65,21 +65,25 @@ end
 
 # 5. sentence_maker initial solution
 
-def sentence_maker (array)
-	counter = 0
-	results = ""
-	while counter <= (array.length - 1)
-		if counter == 0
-			results = array[counter].capitalize.to_s
-		elsif counter == (array.length - 1)
-			results = results + " " + array[counter].to_s + "."
-		else
-			results = results + " " + array[counter].to_s
-		end
-		counter += 1
-	end
-	return results
-end
+# def sentence_maker (array)
+# 	counter = 0
+# 	results = ""
+# 	while counter <= (array.length - 1)
+# 		if counter == 0
+# 			results = array[counter].capitalize.to_s
+# 		elsif counter == (array.length - 1)
+# 			results = results + " " + array[counter].to_s + "."
+# 		else
+# 			results = results + " " + array[counter].to_s
+# 		end
+# 		counter += 1
+# 	end
+# 	return results
+# end
 			
 
 # 6. sentence_maker refactored solution
+
+def sentence_maker (array)
+	array.join(" ").capitalize + "."
+end
