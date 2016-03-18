@@ -53,3 +53,21 @@ puts acct_groups("kunal patel, elon musk, steve jobs, larry page, akshar, kushal
 # Refactored Solution
 
 # Reflection
+
+=begin
+
+1. What was the most interesting and most difficult part of this challenge?
+
+
+2. Do you feel you are improving in your ability to write pseudocode and break the problem down?
+
+
+3. Was your approach for automating this task a good solution? What could have made it even better?
+
+
+4. What data structure did you decide to store the accountability groups in and why?
+
+
+5. What did you learn in the process of refactoring your initial solution? Did you learn any new Ruby methods?
+
+=end
