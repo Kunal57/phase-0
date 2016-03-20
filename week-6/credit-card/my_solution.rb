@@ -116,14 +116,14 @@ p credit_card_number.check_card
 	
 1. What was the most difficult part of this challenge for you and your pair?
 
-
+The most difficult part of this challenge was distinguishing between the numbers being strings or integers. To begin, we had integers, but to check the length we needed to convert the integer into a string. Then again we had to convert the integer into a string to split the integer up into individual numbers. When iterating through the array and multiplying the even index numbered by 2, we had to convert the strings back into integers. Most of our errors came from not having the object structured as a string or integer properly. This was our biggest challenge and we solved it more effectively as the challenge went on.
 
 2. What new methods did you find to help you when you refactored?
 
-
+When refactoring out the initial solution, we found the .inject method. The inject method allowed us to add up the sums of all of the integers one by one. Another method that we utilized was the .join and .split methods. This allowed us to join the array together to form one big integer, and then break each individual digit up. This allowed us to separate double digit integers so that we could proceed onto the next step of refactoring the individual integers.
 
 3. What concepts or learnings were you able to solidify in this challenge?
 
-
+I was able to solidify the concept of raising an ArgumentError. Raising the Argument Error in the challenge if the integer didn't equal 16 was fairly easy and I think I have a solid understanding of the concept now. Besides the Argument Error, I strengthen my ability to break down complex problems into smaller steps with pseudocode. My pair really helped me through the solution and he explained to me why certain steps would be more effective than others. This challenge was difficult but it taught me a lot about problem solving and iterating arrays.
 
 =end
