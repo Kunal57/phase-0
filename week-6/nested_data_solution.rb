@@ -79,13 +79,13 @@ p startup_names
 1. What are some general rules you can apply to nested arrays?
 
 - The deeper you want to dig into the dimensions of an array, the more indices you need to indicate. For example, for a two-dimensional array, you need two indices to select the element (array[1][3]).
--The nested array is just another object within the array.
--Iteration through a nested array needs to be signified with code to run through the nested array.
+- The nested array is just another object within the array.
+- Iteration through a nested array needs to be signified with code to run through the nested array.
 
 2. What are some ways you can iterate over nested arrays?
 
 - In release 3, we iterated over the nested array by asking if the object was an array. If the object was an array, we iterated through the array and added 5 to each number in the array. Else, if the object wasn't an array, we simply added 5 to the number.
--Another was to iterate over an array is to iterate each object in the array and then use an iteration within the iteration. So when iterating each object, you would iterate each objects object if they had any. This would iterate over the array in the array to produce the desired results.
+- Another was to iterate over an array is to iterate each object in the array and then use an iteration within the iteration. So when iterating each object, you would iterate each objects object if they had any. This would iterate over the array in the array to produce the desired results.
 
 3. Did you find any good new methods to implement or did you re-use one you were already familiar with? What was it and why did you decide that was a good option?
 
