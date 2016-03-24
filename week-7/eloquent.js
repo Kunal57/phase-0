@@ -24,8 +24,16 @@ while (number <= 7) {
 // Functions
 
 // Complete the `minimum` exercise.
+var minimum = function(num1, num2) {
+	if (num1 < num2)
+		return num1;
+	else if (num2 < num1)
+		return num2;
+	else
+		return console.log("The numbers are equal");
+}
 
-
+console.log(minimum(23,24))
 
 // Data Structures: Objects and Arrays
 // Create an object called "me" that stores your name, age, 3 favorite foods, and a quirk below.
@@ -84,9 +92,13 @@ Differences
 
 Ch. 3: Functions (Links to an external site.) (Skip the sections on closure and recursion)
 1. What are the differences between local and global variables in JavaScript?
+-Local variables are variables that are created inside of the function including the parameters. Global variables are variables that are declared outside of the function and are visible throughout the whole program.
 2. When should you use functions?
+-Functions should be used to organize code and to prevent repetition. Functions essentially define new instructions that weren't previously defined in JavaScript. As a result, the function can be called multiple times in the scope saving you time and also making your code more concise and organized.
 3. What is a function declaration?
+-A function declaration defines the variable and points it to a given function (ex: function square(x)). Declarations are not part of the regular top-to-bottom flow of control. Instead they are moved to the top of their scope and can be used by all the code in the scope.
 4. Complete the minimum exercise in the eloquent.js file.
+-Done
 
 Ch. 4: Data Structures: Objects and Arrays (Links to an external site.) 
 Skip the sections on the Lycanthrope's log, Computing Correlations, and sections from Further Arrayology to the Global Object, but read the chapter summary.
