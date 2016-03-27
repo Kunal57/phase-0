@@ -30,19 +30,17 @@ separateCommas(10000000)
 
 // Refactored Solution
 var separateCommas = function(number) {
-    var array = number.toString().split("")
-    array = array.reverse()
-    for(var i = 3; i < array.length; i+=4) {
-        array.splice(i,0,",")
+    var string = number.toString()
+
+    for(var i = string.length; i > 3; i-=3) {
+        string = string.slice(0,i-3) + "," + string.slice(i-3)
     }
-    var string = array.reverse().join("")
     console.log(string)
 }
 
 separateCommas(10000000)
 
 // Your Own Tests (OPTIONAL)
-
 
 
 
