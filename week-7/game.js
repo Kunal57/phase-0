@@ -2,91 +2,29 @@
 
 // This is a solo challenge
 
-// Your mission description:
-// Overall mission: 
-// Goals: 
-// Characters:
-// Objects:
-// Functions:
+// Your mission description: Elon Musk is looking for computer programmers to help change the Space Industry. He has selected you to because of your expertise coding skills to help launch the Falcon 9 into space. Your job is the successfully fuel and launch the rocket into outer space.
+// Overall mission: Help SpaceX launch the Falcon 9.
+// Goals: Fuel the rocket & help navigate it to space.
+// Characters: Falcon 9 Rocket.
+// Objects: Rocket, Fuel, Space.
+// Functions: Fueling Rocket Function, Launching Rocket Function.
 
 // Pseudocode
-// Ask the user for an input of either Rock, Paper, Scissors, or Rope.
-// Generate a random number from the computer.
-// If the number is less than .24, the computers choice will be Rock.
-// If the number is between .25 & .50, the computers choice will be Paper.
-// If the number is is between .50 & .75, the computers choice will be Scissors.
-// If the number is more than .75, the computers choice will be Rope.
-// Compare the computers choice to the user input, if they match display a message to make a new choice.
-// Depending on the User Input, uses IF, ELSE IF, and IF statements to determine if the computer or user won the game.
-// use the compare function to compare the userChoice to the computerChoice
+//
+//
+//
+//
+//
 
 // Initial Code
 
-var userChoice = prompt("Do you choose Rock, Paper, Scissors or Rope?");
-var computerChoice = Math.random();
 
-if (computerChoice <= 0.24) {
-    computerChoice = "Rock";
-} else if (computerChoice > 0.24 && computerChoice <= 0.50) {
-    computerChoice = "Paper";
-} else if (computerChoice > 0.50 && computerChoice <= 0.75) {
-    computerChoice = "Scissors";
-} else {
-    computerChoice = "Rope";
-}
 
-console.log("Computer choose: " + computerChoice);
 
-var compare = function(choice1, choice2) {
-    if (choice1 === choice2) {
-        return userChoice = prompt("The result is a tie!\nPlease make a new choice...");
-    }
-    
-    if (choice1 === "Rock") {
-        if (choice2 === "Paper") {
-            return "Paper Wins!";
-        } else if (choice2 === "Scissors") {
-            return "Rock Wins!";
-        } else {
-            return "Rope Wins!";
-        }
-    }
-
-    if (choice1 === "Paper") {
-        if (choice2 === "Rock") {
-            return "Rock Wins!";
-        } else if (choice2 === "Scissors") {
-            return "Scissors Wins!";
-        } else {
-            return "Rope Wins!";
-        }
-    }
-
-    if (choice1 === "Scissors") {
-        if (choice2 === "Rock") {
-            return "Rock Wins!";
-        } else if (choice2 === "Paper") {
-            return "Scissors Wins!";
-        } else {
-            return "Scissors Wins!";
-        }
-    }
-
-    if (choice1 === "Rope") {
-        if (choice2 === "Rock") {
-            return "Rope Wins!";
-        } else if (choice2 === "Paper") {
-            return "Rope Wins!";
-        } else {
-            return "Scissors Wins!";
-        }
-    }
-};
-
-compare(userChoice,computerChoice);
 
 
 // Refactored Code
+
 
 
 
