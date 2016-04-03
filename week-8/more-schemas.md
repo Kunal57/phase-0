@@ -2,13 +2,13 @@
 
 ## One-to-one Relationship
 
-![One-to-One Relationship](one-to-one.png)
+![One-to-One Relationship](imgs/one-to-one.png)
 
 A one-to-one relationship is when two tables are associated with each other based on one matching row. In our example, we have a relationship between the students table and the addresses table. Each address can belong to only one student, meaning it is a one-to-one relationship. The address_id field in the students table refers to the matching record in the address table. This is known as a "foreign key".
 
 ## Many-to-Many Relationship
 
-![Many-to-Many Relationship](many-to-many.png)
+![Many-to-Many Relationship](imgs/many-to-many.png)
 
 The many-to-many relationship is when two tables are associated with each other based on multiple matching rows. The first table can map to multiple rows in the second table, and the rows in the second table can also map to multiple rows in the first table. In our example, we have grocery\_lists table and a items table. A grocery list can have multiple items, and items can belong to multiple grocery lists. In the way, the relationship between the two tables is many-to-many. These two tables can be joined together in the grocery\_list\_items table through the grocery_lists foreign key & the items foreign key.
 
