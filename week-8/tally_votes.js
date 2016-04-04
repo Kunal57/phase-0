@@ -130,20 +130,63 @@ console.log(officers);
 // __________________________________________
 // Refactored Solution
 
+for (var voter in votes) {
+  if (!votes.hasOwnProperty(voter)) continue;
+  var voterObj = votes[voter];
+  for (var position in voterObj) {
+    if (!voterObj.hasOwnProperty(position)) continue;
+    var voteCast = voterObj[position];
+    if (voteCount[position].hasOwnProperty(voteCast)){
+      voteCount[position][voteCast] ++;
+    }
+    else {
+      voteCount[position][voteCast] = 1;
+    }
+  }
+}
 
+// console.log(voteCount);
 
+for (var position in voteCount) {
+  if (!voteCount.hasOwnProperty(position)) continue;
+  var positionObj = voteCount[position];
+  var highestTally = 0;
+  var winners = [];
+  
+  for (var candidate in positionObj) {
+    if (!positionObj.hasOwnProperty(candidate)) continue;
+    if (positionObj[candidate] > highestTally){
+      highestTally = positionObj[candidate];
+      winners = [candidate];
+    }
+    else if (positionObj[candidate] === highestTally){
+      winners.push(candidate);
+    }
+  }
+  officers[position] = String(winners);
+}
 
+console.log(officers);
+
+// console.log(officers);
 
 
 // __________________________________________
 // Reflection
-
 /*
 1. What did you learn about iterating over nested objects in JavaScript?
-2. Were you able to find useful methods to help you with this?
-3. What concepts were solidified in the process of working through this challenge?
-*/
 
+I learned about the "for ... in ..." loop to iterate through nested objects in JavaScript.
+
+2. Were you able to find useful methods to help you with this?
+
+My partner and I didn't look for methods as we wanted to complete the challenge using basic logic. I'll go back afterwards and find methods that will help me iterate over the nested objects.
+
+3. What concepts were solidified in the process of working through this challenge?
+
+The concept of accessing properties through dot notation and bracket notation were solidified through this challenge. I was better able to understand how the dot notation differed from the bracket notation how how variables didn't need to use quotation marks within the brackets.
+
+*/
 // __________________________________________
 // Test Code:  Do not alter code below this line.
 
