@@ -1,18 +1,48 @@
-# Smallest Integer
+# 4.6.1 Smallest Integer in Array
 
-# I worked on this challenge [by myself].
+=begin
 
-# smallest_integer is a method that takes an array of integers as its input
-# and returns the smallest integer in the array
-#
-# +list_of_nums+ is an array of integers
-# smallest_integer(list_of_nums) should return the smallest integer in +list_of_nums+
-#
-# If +list_of_nums+ is empty the method should return nil
+PSEUDOCODE
+Input: Array of Integers
+Output: Integer
+Steps:
+1. Define method smallest_integer with parameter of Array
+2. Define variable called smallest_num
+3. Define counter variable
+4. WHILE counter < array.length
+5.  IF Array[counter] < smallest_num
+6. 		smallest_num = Array[counter] & increment counter by 1
+7.  ELSE
+8.     counter += 1
+9.  END IF
+10.END WHILE loop
+11. p smallest_num
+12. END method
 
-# Your Solution Below
-def smallest_integer(list_of_nums)
-   return list_of_nums.min
+=end
+
+# Initial Solution
+
+def smallest_integer(array)
+	counter = 0
+	smallest_num = array[0]
+	while counter < array.length
+		if array[counter] < smallest_num
+			smallest_num = array[counter]
+			counter += 1
+		else
+			counter += 1
+		end
+	end
+	return smallest_num
 end
 
-puts smallest_integer([1944, -19, 3, -77, 173])
+# DRIVER CODE
+
+smallest_integer([100,75,50,1,25])
+
+# Refactor 
+
+def smallest_integer(array)
+	return array.min
+end
