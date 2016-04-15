@@ -1,16 +1,31 @@
+# 4.5.3 Triangle Side Lengths
 
-# I worked on this challenge [by myself, with: ].
+=begin
 
+PSEUDOCODE
+Input: 3 non-negative Integers
+Output: Boolean
+Steps:
+1. Define method valid_triangle? taking in (side1, side2, side3) as parameters
+2. IF side1 + side2 is greater than side3
+3. AND side2 + side3 is greater than side1
+4. AND side3 + side1 is greater than side2
+5. RETURN true
+6. ELSE RETURN false
+7. END IF statement
+8. END method
 
-# Your Solution Below
+=end
 
-def valid_triangle?(a, b, c)
-  if a + b > c && a + c > b && b + c > a
-  	return true
-  else
-  	return false
-  end
+# Initial solution
+
+def valid_triangle?(side1, side2, side3)
+	if ((side1 + side2 > side3) && (side2 + side3 > side1) && (side3 + side1 > side2))
+		return true
+	else
+		return false
+	end
 end
 
-
-puts valid_triangle?(10,5,10)
+#DRIVER CODE
+p valid_triangle?(1,1,1)
