@@ -1,21 +1,48 @@
-# Longest String
+# 4.6.4 Longest String in Array
 
-# I worked on this challenge [by myself, with: ].
+=begin
 
-# longest_string is a method that takes an array of strings as its input
-# and returns the longest string
-#
-# +list_of_words+ is an array of strings
-# longest_string(list_of_words) should return the longest string in +list_of_words+
-#
-# If +list_of_words+ is empty the method should return nil
+PSEUDOCODE
+Input: An array of strings
+Output: A string
+Steps:
+1. Define method longest_string that takes an (array) of strings as a parameter
+2. Set counter equal to 0
+3. Set big_string variable = array[0]
+4. WHILE counter is less than array.length
+5. IF array[counter].length > big_string
+6. big_string = array[counter]
+7. Increment counter by 1
+8. ELSE increment counter by 1
+9. END IF statement & WHILE loop
+10. p big_string
+11. End method
 
+=end
 
-# Your Solution Below
-def longest_string(list_of_words)
-  list_of_words.max do |x, y|
-  	x.size <=> y.size
-  end
+# Initial Solution
+
+def longest_string(array)
+	counter = 0
+	big_string = array[0]
+	while counter < array.length
+		if array[counter].length > big_string.length
+			big_string = array[counter]
+			counter += 1
+		else
+			counter += 1
+		end
+	end
+	p big_string
 end
 
-puts longest_string(["Elon","Musk","Is","Awesome"])
+# DRIVER CODE
+longest_string(["kunal","patel","spacex","elon","musk"])
+
+# Refactor
+
+def longest_string(array)
+	array.max do |x,y|
+		x.length <=> y.length
+	end
+end
