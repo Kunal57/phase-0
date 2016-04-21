@@ -75,7 +75,7 @@ puts separate_comma(122723823989823223493812323971)
 
 # 3. Reflection
 
-=begin
+
 	
 1. What was your process for breaking the problem down? What different approaches did you consider?
 
@@ -98,4 +98,25 @@ Initially, I didn't really iterate through the data structure. I called If State
 
 Yes. As I mentioned above, my refactored solution is much more efficient and readable than my initial solution. The reason for this is due to the fact that I restructured my steps for the solution. Instead of utilizing the if statement, I combined the while loop with the .unshift method to simply insert commas every third digit. This meant that I could input a 100 digit number and still produce a string with commas separating the integers. With my initial solution this wouldn't have been possible without more lines of code. 
 
-=end
+
+
+
+
+
+
+
+
+# EXTRA PRACTICE ON MY OWN
+
+# 5.5 Separate Numbers with Commas
+
+def separate_comma(integer)
+	array = []
+	new_int = integer.to_s.reverse!
+	until new_int.length == 0
+	array << new_int.slice!(0..2)
+	end
+	return array.join(",").reverse!
+end
+
+p separate_comma(1234567000)
