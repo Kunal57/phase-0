@@ -198,3 +198,183 @@ What did you learn about researching and explaining your research to others?
 Explanation in reflection file.
 
 =end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# EXTRA PRACTICE BY MYSELF
+
+# # Research Methods
+
+# i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
+# my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
+
+
+# # Person 1's solution
+# def my_array_finding_method(array, letter)
+#   found = []
+#   array.each do |x|
+#     if x.to_s.include?(letter)
+#       found << x
+#     end
+#   end
+#   p found
+# end
+
+# my_array_finding_method(i_want_pets, "t")
+
+# def my_hash_finding_method(hash, number)
+#   pet_names = []
+#   hash.each do |key, value|
+#     if value == number
+#       pet_names << key
+#     end
+#   end
+#   p pet_names
+# end
+
+# my_hash_finding_method(my_family_pets_ages, 3)
+
+
+# # Person 2
+# def my_array_modification_method!(array, number)
+#   array.map! do |x|
+#     if x.class == Fixnum
+#       x + number
+#     else
+#       x = x
+#     end
+#   end
+#   p array
+# end
+
+# my_array_modification_method!(i_want_pets, 1)
+
+# def my_hash_modification_method!(hash, years)
+#   hash.each do |k,v|
+#     hash[k] = (v + years)
+#   end
+#   p hash
+# end
+
+# my_hash_modification_method!(my_family_pets_ages, 2)
+
+
+# # Person 3
+
+# i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
+# my_family_pets_ages = {"Evi" => 6, "Ditto" => 2, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 5, "Annabelle" => 0}
+
+# def my_array_sorting_method(array)
+#   nums = []
+#   words = []
+#   array.each do |item|
+#     if item.class == String
+#       words << item
+#     else
+#       nums << item
+#     end
+#   end
+#   nums = nums.sort
+#   words = words.sort
+#   p new_array = nums.concat(words)
+# end
+
+# my_array_sorting_method(i_want_pets)
+
+# def my_hash_sorting_method(hash)
+#   age = hash.values.sort
+#   sorted_age = []
+#   counter = 0
+#   while counter < age.length
+#     array = []
+#     array << hash.key(age[counter])
+#     array << age[counter]
+#     sorted_age << array
+#     counter += 1
+#   end
+#   p sorted_age
+# end
+
+# my_hash_sorting_method(my_family_pets_ages)
+
+
+# # Person 4
+# def my_array_deletion_method!(array, letter)
+#     array.delete_if do |x|
+#       (x.class == String) && (x.include?(letter))
+#     end
+#     p array
+# end
+
+# my_array_deletion_method!(i_want_pets, "a")
+
+# def my_hash_deletion_method!(hash, name)
+#   hash.delete(name)
+#   p hash
+# end
+
+# my_hash_deletion_method!(my_family_pets_ages, "George")
+
+# # Person 5
+
+# i_want_pets = ["I", "want", 3, "pets", "but", "only", "have", 2]
+# my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, "Bogart" => 4, "Poly" => 4, "Annabelle" => 0}
+
+# def my_array_splitting_method(array)
+#   nums = []
+#   other = []
+#   array.each do |x|
+#     if x.class == Fixnum
+#       nums << x
+#     else
+#       other << x
+#     end
+#   end
+#   new_array = []
+#   new_array << nums
+#   new_array << other
+#   p new_array
+# end
+
+# my_array_splitting_method(i_want_pets)
+
+# def my_hash_splitting_method(hash, age)
+#   array1 = []
+#   array2 = []
+#   hash.each do |k, v|
+#     if v <= age
+#       arr = []
+#       arr << hash.key(v)
+#       arr << hash[k]
+#       hash.delete(k)
+#       array1 << arr
+#     else
+#       arr = []
+#       arr << hash.key(v)
+#       arr << hash[k]
+#       array2 << arr
+#     end
+#   end
+#   final_array = []
+#   final_array << array1
+#   final_array << array2
+#   p final_array
+# end
+
+# my_hash_splitting_method(my_family_pets_ages, 4)
