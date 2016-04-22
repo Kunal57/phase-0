@@ -1,31 +1,40 @@
-# I worked on this challenge [by myself].
-# This challenge took me [1.5] hours.
+# Fibonacci Sequence
 
-# Pseudocode
+=begin
 
-# INPUT: Integer
-# OUPUT: Boolean
-# Generate fib numbers less than or equal to input
-# Test whether input one of the generated fib numbers
-# Return boolean true if is fib number
-# Return boolean false if not a fib number
+PSEUDOCODE
+Input: An integer
+Output: Boolean
+Steps:
+1. Define a method called 'is_fibonacci?' with a parameter that takes an integer
+2. Set a counter variable.
+3. WHILE counter < num
+4. Set a fibonacci_num variable = [0,1]
+5. Add the -2 index and -1 index from the array together and push into back into the array
+6. IF the num equals a fibonacci number, return true
+7. ELSE return false
+8. Increment counter by 1
+9. End IF statement, End method
+
+=end
 
 # Initial Solution
 
 def is_fibonacci?(num)
-  fibs = [0, 1]
-  if (num != 0) && (num !=1 )
-    while fibs.last < num
-      fibs <<  fibs.inject {|x, y| x+y}
-      fibs.shift
-      if num == fibs.last
-        return true
-      end
-    end
-    return false
-  else true
+fibonacci_numbers = [0,1]
+  until fibonacci_numbers[-1] > num
+    next_number = fibonacci_numbers[-2]+fibonacci_numbers[-1]
+    fibonacci_numbers << next_number
+    p fibonacci_numbers
   end
+    if fibonacci_numbers.include?(num)
+      return true
+    else
+      return false
+    end
 end
+
+p is_fibonacci?(144)
 
 
 
