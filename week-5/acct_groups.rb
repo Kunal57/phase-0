@@ -1,52 +1,67 @@
-# CHALLENGE 5.6
-
-# Pseudocode
+# 5.6 Create Accountability Groups
 
 =begin
 
-Input: Strings
-Output: Array
+PSEUDOCODE
+Input: A String.
+Output: Strings.
 Steps:
-1. DEF Method groups
-2. Convert string into an array
-3. Shuffle array objects
-4. WHILE array is 5 or greater, place the first 5 strings in a separate array.
-5. ELSE put the remainder objects one by one into the arrays starting from beginning to end.
-6. END method
-	
+1. Define a method called 'accountability_groups' that accepts a parameter of a string.
+2. Convert the string into an array by seperating it by a ','.
+3. Take the array length and determine if dividing the length by 4,3, or 5 will produce a remainder of 0 or 1.
+4. Use the results to form that many groups. 
+5. Shuffle the array.
+6. Insert the first 3/4 individuals into the first array.
+7. Loop through till the array doesn't have any more people in them.
+8. Iterate through each array and print the names out with the group number.
+9. End method
+
 =end
 
-
 # Initial Solution
-def acct_groups(lst)
-  if lst.count < 3
-    puts "You need to find a larger group."
+
+def accountability_groups(string)
+  names_array = string.split(",").shuffle
+  group_members = 0
+  last_member = []
+
+  if names_array.length % 5 == 0
+    group_members = 5
+  elsif names_array.length % 4 == 0
+    group_members =  4
+  elsif names_array.length % 3 == 0
+    group_members = 3
   else
-  
-    groups = Hash.new{|hsh,key| hsh[key] = Array.new }
-    num = 1
-    
-    lst.each do |name|
-      group_num = "Group " + num.to_s
-      if groups[group_num].count < 2
-        groups[group_num].push name
-      else
-        num += 1
-        groups[group_num].push name
-      end
-    end
-    
-    if groups[groups.keys.last].count < 3
-      groups[groups.keys.first].push(groups[groups.keys.last]).flatten!
-      groups.delete(groups.keys.last)
-    end
-    
-    p groups
-    
+    group_members = 3
+    last_member << names_array[-1]
+    names_array.delete_at(-1)
   end
+
+  num_of_groups = names_array.length / group_members
+
+  groups = []
+  counter = 0
+  while counter < num_of_groups
+    groups << names_array[0, group_members]
+    names_array = names_array.drop(group_members)
+    counter += 1
+  end
+  if last_member.empty?
+  else
+    groups[0].concat(last_member)
+  end
+
+  group_counter = 1
+
+  groups.each do |group|
+    puts " #{group.join(",")} is in group #{group_counter}."
+    group_counter += 1
+  end
+
+
 end
 
-acct_groups(["kunal","patel","elon","musk","steve","jobs","warren","buffet","mark","cuban"])
+accountability_groups("Kunal 1, Kunal 2, Kunal 3, Kunal 4, Kunal 5, Kunal 6, Kunal 7, Kunal 8, Kunal 9, Kunal 10, Kunal 11, Kunal 12, Kunal 13, Kunal 14, Kunal 15, Kunal 16, Kunal 17, Kunal 18, Kunal 19, Kunal 20, Kunal 21, Kunal 22, Kunal 23, Kunal 24, Kunal 25, Kunal 26, Kunal 27, Kunal 28, Kunal 29, Kunal 30, Kunal 31, Kunal 32, Kunal 33, Kunal 34")
 
 
 # Refactored Solution
