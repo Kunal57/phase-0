@@ -1,54 +1,62 @@
-# Build a simple guessing game
+# 6.3 Build a Simple Guessing Game
 
+=begin
 
-# I worked on this challenge [by myself].
-# I spent [1] hours on this challenge.
+PSEUDOCODE
+Input: An Integer.
+Output: A Symbol & Boolean.
+Steps:
+1. Create a Class called 'GuessingGame'
+2. Initialize it with a integer called 'answer'
+3. Define a method called 'guess' that takes a 'guess' as a paramter
+4. Return :high if the guess is larger than the answer, :low if the guess is lower than the answer, and :correct if the guess is equal to the answer.
+5. Define a method called 'solved?' that returns a boolean if the answer is true or false.
+6. End the methods and Class
 
-# Pseudocode
-
-# Input: Integer.
-# Output: A symbol or boolean.
-# Steps:
-# Initialize Class
-# Def Guess 
-# if integer < @answer return :low or if integer > answer return :high
-# else return correct
-# If guess is correct, return true or false
-
+=end
 
 # Initial Solution
 
 class GuessingGame
+
   def initialize(answer)
-    # Your initialization code goes here
     @answer = answer
+    @solved = false
   end
 
-  def guess(integer)
-    @guess = integer 
-  	 if integer < @answer
-      :low
-  	 elsif integer > @answer
-      :high
-  	 else
-      :correct
-  	end
+  def guess(guess)
+    if guess > @answer
+      @solved = false
+      return :high
+    elsif guess < @answer
+      @solved = false
+      return :low
+    else
+      @solved = true
+      return :correct
+    end
   end
 
   def solved?
-    if @answer == @guess
-    	return true
-    else
-    	return false
-    end
+    return @solved
   end
+
 end
+
+# DRIVER CODE
+
+guessing_game = GuessingGame.new(23)
+
+p guessing_game.guess(23)
+p guessing_game.solved?
+p guessing_game.guess(24)
+p guessing_game.solved?
+
 
 # Refactored Solution
 
 class GuessingGame
   def initialize(answer)
-    # Your initialization code goes here
     @answer = answer
   end
 
@@ -71,6 +79,7 @@ class GuessingGame
     end
   end
 end
+
 
 # Reflection
 
@@ -92,4 +101,4 @@ Control flow is using branches to determine the output of a given input. Dependi
 
 I think this code requires us to use symbols because they are easier to utilize. The symbol outputs can be called upon in additional code to make it easier to translate and process the data. Symbols are also permanent and can't be changed. Outputting a permanent result challenge is necessary as the user cannot manipulate the result once entered.
 
-=end	
+=end
