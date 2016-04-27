@@ -1,47 +1,44 @@
-# Die Class 2: Arbitrary Symbols
+# 6.2 Die Class: Arbitrary Symbols
 
+=begin
 
-# I worked on this challenge [by myself].
-# I spent [1] hours on this challenge.
+PSEUDOCODE
+Input: An Array of Strings
+Output: A String
+Steps:
+1. Make a Class called 'Die'
+2. Initialize the class with a Array_of_strings parameters
+3. Define a method called 'sides' that returns the number of strings in the array
+4. Define a roll method that returns one of the strings as a result.
+5. End the Class
 
-# Pseudocode
-
-# Input: An Array of Strings.
-# Output: A String
-# Steps:
-
-# Initialize labels.
-# Raise Arugment if Array is empty.
-
-# Def sides
-# Return the length of the array (number of strings in the array).
-
-# Def roll
-# Shuffle Array
-# Return value of Array[0]
-
+=end
 
 # Initial Solution
 
 class Die
-  def initialize(labels)
-  	@labels = labels
-  	if @labels.empty?
-  		raise ArgumentError.new ("Input cannot be empty.")
-  	end
+  def initialize(array_of_strings)
+    if array_of_strings.empty?
+      raise ArgumentError.new("Wrong Number of Arguments")
+    else
+      @array_of_strings = array_of_strings
+    end
   end
 
   def sides
-  	return @labels.length
+    @array_of_strings.length
   end
 
   def roll
-  	mixed_labels = @labels.shuffle
-  	return mixed_labels[0]
+    rand_array = @array_of_strings.shuffle
+    rand_array[0]
   end
 end
 
-die = Die.new(["Elon", "Musk", "Steve", "Jobs"])
+# DRIVER CODE
+
+die = Die.new(["K","U","N","A","L"])
+
 p die.sides
 p die.roll
 
