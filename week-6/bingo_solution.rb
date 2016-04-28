@@ -18,6 +18,7 @@ Steps:
 # Initial Solution
 
 class BingoBoard
+  attr_reader :board
 
   def initialize(board)
     @board = board
@@ -37,23 +38,93 @@ class BingoBoard
     letter = @call[0]
     number = @call[1,2].to_i
     if letter == "B"
-      
+      if @board[0][0] == number
+        @board[0][0] = "X"
+      elsif @board[1][0] == number
+        @board[1][0] = "X"
+      elsif @board[2][0] == number
+        @board[2][0] = "X"
+      elsif @board[3][0] == number
+        @board[3][0] = "X"
+      elsif @board[4][0] == number
+        @board[4][0] = "X"
+      end
+    end
+    if letter == "I"
+      if @board[0][1] == number
+        @board[0][1] = "X"
+      elsif @board[1][1] == number
+        @board[1][1] = "X"
+      elsif @board[2][1] == number
+        @board[2][1] = "X"
+      elsif @board[3][1] == number
+        @board[3][1] = "X"
+      elsif @board[4][1] == number
+        @board[4][1] = "X"  
+      end
+    end
+    if letter == "N"
+      if @board[0][2] == number
+        @board[0][2] = "X"
+      elsif @board[1][2] == number
+        @board[1][2] = "X"
+      elsif @board[2][2] == number
+        @board[2][2] = "X"
+      elsif @board[3][2] == number
+        @board[3][2] = "X"
+      elsif @board[4][2] == number
+        @board[4][2] = "X"
+      end
+    end
+    if letter == "G"
+      if @board[0][3] == number
+        @board[0][3] = "X"
+      elsif @board[1][3] == number
+        @board[1][3] = "X"
+      elsif @board[2][3] == number
+        @board[2][3] = "X"
+      elsif @board[3][3] == number
+        @board[3][3] = "X"
+      elsif @board[4][3] == number
+        @board[4][3] = "X"
+      end
+    end
+    if letter == "O"
+      if @board[0][4] == number
+        @board[0][4] = "X"
+      elsif @board[1][4] == number
+        @board[1][4] = "X"
+      elsif @board[2][4] == number
+        @board[2][4] = "X"
+      elsif @board[3][4] == number
+        @board[3][4] = "X"
+      elsif @board[4][4] == number
+        @board[4][4] = "X"
+      end
+    end
+    @board.each do |x|
+      p x
+    end
+    return
   end
-
 end
 
+# DRIVER CODE
+
 bingoboard = BingoBoard.new([[47, 44, 71, 8, 88],
-               [22, 69, 75, 65, 73],
-               [83, 85, 97, 89, 57],
-               [25, 31, 96, 68, 51],
-               [75, 70, 54, 80, 83]])
-
-p bingoboard.call
-p bingoboard.check
+                            [22, 69, 75, 65, 73],
+                            [83, 85, 97, 89, 57],
+                            [25, 31, 96, 68, 51],
+                            [75, 70, 54, 80, 83]])
 
 
+counter = 1
 
-
+until counter == 100
+  p bingoboard.call
+  p bingoboard.check
+  counter += 1
+end
 
 
 
