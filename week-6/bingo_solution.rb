@@ -28,7 +28,7 @@ class BingoBoard
   def call
     letter = ["B","I","N","G","O"]
     rand_num = Random.new
-    call = letter.shuffle[0] + rand_num.rand(100).to_s
+    call = letter.shuffle[0] + rand_num.rand(1..100).to_s
     @call = call
   end
 
@@ -111,22 +111,35 @@ end
 
 # DRIVER CODE
 
-bingoboard = BingoBoard.new([[47, 44, 71, 8, 88],
-                            [22, 69, 75, 65, 73],
-                            [83, 85, 97, 89, 57],
-                            [25, 31, 96, 68, 51],
-                            [75, 70, 54, 80, 83]])
+def create_board
+  board = [[],[],[],[],[]]
+  rand_num = Random.new
+  counter = 0
+  until counter == 5
+    board[counter][0] = rand_num.rand(1..15)
+    board[counter][1] = rand_num.rand(16..30)
+    board[counter][2] = rand_num.rand(31..45)
+    board[counter][3] = rand_num.rand(46..60)
+    board[counter][4] = rand_num.rand(61..75)
+    counter += 1
+  end
+  board[2][2] = "X"
+  board.each do |x|
+    p x
+  end
+end
+
+
+bingoboard = BingoBoard.new(create_board)
 
 
 counter = 1
 
-until counter == 100
+until counter == 300
   p bingoboard.call
   p bingoboard.check
   counter += 1
 end
-
-
 
 
 
