@@ -1,4 +1,4 @@
- // JavaScript Olympics
+// JavaScript Olympics
 
 // I paired with: Leland Meiners on this challenge.
 
@@ -8,41 +8,59 @@
 
 // Bulk Up
 
-var sarah = {
-	name: "Sarah Hughes",
-	event: "Ladies Singles",
-};
+var tomBrady = {name: "Tom Brady", event: "Super Bowl"};
+var kobeBryant = {name: "Kobe Bryant", event: "NBA Finals"};
 
-var addWin = function(athletes) {
-	for (i in athletes) {
-		athletes[i] = athletes[i].name + " won the " + athletes[i].event + "!";
+athleteArray = [];
+athleteArray.push(tomBrady, kobeBryant);
+console.log(athleteArray);
+
+function winner(array_of_athletes) {
+	for(i=0;i < array_of_athletes.length; i++) {
+		array_of_athletes[i].win = array_of_athletes[i].name + " won the " + array_of_athletes[i].event;
 	}
-	console.log(athletes[i]);
-	};
+	return array_of_athletes
+}
 
-addWin([sarah])
-
+console.log(winner(athleteArray))
 
 // Jumble your words
 
-var jumble = function(string) {
-	console.log(string.split("").reverse().join(""));
+function reverseString(string) {
+	var revString = string.split("").reverse().join("");
+	return revString;
 }
 
-jumble("This is a string!")
-
+console.log(reverseString("Kunal Patel"));
 
 // 2,4,6,8
+// Attempt 1
 
 var even = function(array) {
+	evenArray = []
 	for (var i = 0; i < array.length; i ++) {
 		if (array[i] % 2 === 0) {
-			console.log(array[i]);	
+			 evenArray.push(array[i]);	
 		}
 	}
+	return evenArray
 }
 
-even([1,2,3,4,5,6,7,8,9])
+console.log(even([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]))
+
+// Attempt 2
+function even(array_of_integers) {
+	evenArray = [];
+	for (i=0; i < array_of_integers.length; i++) {
+		num = array_of_integers[i] % 2
+		if (num == 0) {
+			evenArray.push(array_of_integers[i]);
+		} 
+	}
+	return evenArray;
+}
+
+console.log(even([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]))
 
 // "We built this city"
 
@@ -60,7 +78,7 @@ console.log(michaelPhelps.name + " " + michaelPhelps.sport + " " + michaelPhelps
 
 // Reflection
 
-/*
+/**
 
 1. What JavaScript knowledge did you solidify in this challenge?
 
@@ -75,4 +93,4 @@ A constructor function is any function that is used as a constructor. A function
 The difference is in the type of objects and interactions involved in Ruby and JavaScript. Ruby uses objects inherited from Class to create new objects, whereas JavaScript can either define literal objects or constructor functions to create new objects.
 JavaScript also allows for the creation of new objects with "Function.prototype", the idea that new objects reference the prototype object of the constructor function, thus inheriting its behavior. In Ruby, this is done through class objects and method definitions.
 
-*/
+**/
