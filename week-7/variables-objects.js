@@ -1,4 +1,4 @@
- // JavaScript Variables and Objects
+// JavaScript Variables and Objects
 
 // I paired by myself on this challenge.
 
@@ -11,7 +11,9 @@ var password = "just open the door";
 
 var allowedIn = false;
 
-var members = ["John","Elon","Musk","Mary"]
+var members = [];
+
+members.push("John","Tom","Kobe","Mary");
 
 // __________________________________________
 
