@@ -1,5 +1,55 @@
 // Add the finished solution here when you receive it.
 
+// Initial Solution 
+
+// Sum Function
+function sum(array){
+  var sum = 0;
+  if (array.length % 2 != 0)
+    for (var i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+  else {
+    for (var i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+  }
+  return sum;
+}
+
+// Mean Function
+function mean(array){
+  var sum = 0;
+  if (array.length % 2 != 0)
+    for (var i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+  else {
+    for (var i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+  }
+  return sum/array.length;
+}
+
+// Median Function
+function median(array){
+  var median = 0;
+  if (array.length % 2 != 0) {
+    var index = array.length / 2;
+    median = array[Math.floor(index)];
+    }
+  else {
+    nums = 0;
+    nums += array[(array.length / 2) - 1];
+    nums += array[(array.length / 2)];
+    median = nums / 2;
+    }
+  return median;
+}
+
+// Refactored Solution
+
 // Sum Function
 function sum(array) {
   return array.reduce(function(a, b) {
@@ -18,7 +68,6 @@ function median(array) {
     var median = array[(array.length - 1) / 2];
   else
     var median = (array[array.length / 2] + array[array.length / 2 - 1]) / 2.0;
-  console.log(median);
   return median;
 };
 
