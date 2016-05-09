@@ -1,26 +1,80 @@
- // Design Basic Game Solo Challenge
+// Design Basic Game Solo Challenge
 
 // This is a solo challenge
 
-// Your mission description: Elon Musk is looking for computer programmers to help change the Space Industry. He has selected you to because of your expertise coding skills to help launch the Falcon 9 into space. Your job is the successfully fuel and launch the rocket into outer space.
-// Overall mission: Help SpaceX launch the Falcon 9.
-// Goals: Fuel the rocket & help navigate it to space.
-// Characters: Falcon 9 Rocket.
-// Objects: Rocket, Fuel, Space.
-// Functions: Fueling Rocket Function, Launching Rocket Function.
+// THE MISSION -
+// Mission Description: Help Tom Brady lead a game-winning drive in the Superbowl.
+// Goals: Score a Touch-Down.
+// Characters: Tom Brady, Rob Gronkowski, Julian Edelman, Danny Amendola, Dion Lewis
+// Objects: Tom Brady, Football
+// Functions: Throw, Run
 
-// Pseudocode
-//
-//
-//
-//
-//
+/**
+PSEUDOCODE
+1. Create a tomBrady object 
+
+**/
 
 // Initial Code
 
+var tomBrady = {
+	firstDown: 0,
+	yardsToGo: 10,
+	touchdown: 80,
+	throw: function() {
+		var yards = Math.floor((Math.random() * tomBrady.yardsToGo) + 1)
+		tomBrady.yardsToGo = tomBrady.yardsToGo - yards
+		tomBrady.touchdown = tomBrady.touchdown - yards
+		console.log(tomBrady.yardsToGo)
+		console.log(tomBrady.touchdown)
+		if (tomBrady.touchdown == 0) {
+			return "Touchdown Patriots!";
+		}
+		else if (tomBrady.yardsToGo <= 0) {
+			tomBrady.yardsToGo = 10;
+			return "Tom Brady throws a completion for " + yards + " yards! First down Patriots!";
+		}
+		else {
+			return "Tom Brady throws a completion for " + yards + " yards!";
+		}
+	}
+};
+
+field = {
+	tomBrady: 50,
+	touchdown: false,
+};
+
+var receivers = {
+	"Rob Gronkowski": 0,
+	"Julian Edelman": 0,
+	"Danny Amendola": 0,
+	"Dion Lewis": 0,
+};
 
 
 
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
+console.log(tomBrady.throw())
 
 
 // Refactored Code
