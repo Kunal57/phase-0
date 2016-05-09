@@ -18,31 +18,83 @@ PSEUDOCODE
 // Initial Code
 
 var tomBrady = {
-	firstDown: 0,
-	yardsToGo: 10,
-	touchdown: 80,
-	throw: function() {
-		var yards = Math.floor((Math.random() * tomBrady.yardsToGo) + 1)
-		tomBrady.yardsToGo = tomBrady.yardsToGo - yards
-		tomBrady.touchdown = tomBrady.touchdown - yards
-		console.log(tomBrady.yardsToGo)
-		console.log(tomBrady.touchdown)
-		if (tomBrady.touchdown == 0) {
-			return "Touchdown Patriots!";
+	totalYards: 0,
+	runningYards: 0,
+	pass: function() {
+		if (field.down < 5) {
+			var yards = Math.floor((Math.random() * 10) + 1)
+			field.firstDown = field.firstDown - yards
+			field.yardsToTouchDown = field.yardsToTouchDown - yards
+			var options = ["Rob Gronkowski","Julian Edelman","Danny Amendola","Dion Lewis"];
+			var routes = ["hitch","slant","out","dig","post","corner","go"];
+			var receiver = options[Math.floor(Math.random() * options.length)]
+			var route = routes[Math.floor(Math.random() * options.length)]
+			receivers[receiver] += yards;
+			tomBrady.totalYards += yards;
+			// console.log(field.firstDown)
+			// console.log(field.yardsToTouchDown)
+			// console.log(receiver)
+			// console.log(route)
+			if (field.touchdown == false) {
+				if (field.yardsToTouchDown <= 0) {
+					field.touchdown = true;
+					field.playerTD = receiver;
+					return "Brady throws it into the endzone for " + receiver + "! Touchdown Patriots!";
+				}
+				else if (field.firstDown <= 0) {
+					field.firstDown = 10;
+					field.down = 1;
+					return "Tom Brady throws a completion for " + yards + " yards to " + receiver + "! First down Patriots!";
+				}
+				else {
+					field.down += 1;
+					return "Brady throws to " + receiver + " on a " + route + " route for a " + yards + " yard gain!"
+				}
+			}
 		}
-		else if (tomBrady.yardsToGo <= 0) {
-			tomBrady.yardsToGo = 10;
-			return "Tom Brady throws a completion for " + yards + " yards! First down Patriots!";
-		}
-		else {
-			return "Tom Brady throws a completion for " + yards + " yards!";
+	},
+	
+	run: function() {
+		if (field.down < 5) {
+			var yards = Math.floor((Math.random() * 10) + 1)
+			field.firstDown = field.firstDown - yards
+			field.yardsToTouchDown = field.yardsToTouchDown - yards
+			var options = ["Dion Lewis","LeGarrette Blount","Brandon Bolden"];
+			var routes = ["blast","draw","pitch","sweep",];
+			var runningBack = options[Math.floor(Math.random() * options.length)]
+			var route = routes[Math.floor(Math.random() * options.length)]
+			runningBacks[runningBack] += yards;
+			tomBrady.runningYards += yards;
+			// console.log(field.firstDown)
+			// console.log(field.yardsToTouchDown)
+			// console.log(runningBack)
+			// console.log(route)
+			if (field.touchdown == false) {
+				if (field.yardsToTouchDown <= 0) {
+					field.touchdown = true;
+					field.playerTD = runningBack;
+					return runningBack + " takes the handoff from Brady and muscles his way into the endzone! Touchdown Patriots!";
+				}
+				else if (field.firstDown <= 0) {
+					field.firstDown = 10;
+					field.down = 1;
+					return "Tom Brady hands it off to " + runningBack + " for a " + yards + " yard gain! First down Patriots!";
+				}
+				else {
+					field.down += 1;
+					return runningBack + " gets the ball on a " + route + " route and takes it for a " + yards + " yard gain!"
+				}
+			}
 		}
 	}
 };
 
 field = {
-	tomBrady: 50,
+	firstDown: 10,
+	yardsToTouchDown: 80,
 	touchdown: false,
+	playerTD: "",
+	down: 1,
 };
 
 var receivers = {
@@ -52,30 +104,30 @@ var receivers = {
 	"Dion Lewis": 0,
 };
 
+var runningBacks = {
+	"Dion Lewis": 0,
+	"LeGarrette Blount": 0,
+	"Brandon Bolden": 0,
+}
 
+for (var i = 1; field.touchdown == false; i+=3) {
+	console.log(tomBrady.pass());
+	console.log(tomBrady.run());
+}
 
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
-console.log(tomBrady.throw())
+console.log("Tom Brady led a " + i + " play - " + (tomBrady.totalYards + tomBrady.runningYards) + " yard drive to win the Superbowl!")
 
+if (field.touchdown == true) {
+	console.log(field.playerTD + " scored the game winning Touchdown!");
+}
+
+for (var key in receivers) {
+	console.log(key + " had " + receivers[key] + " receiving yards on that game winning drive!");
+}
+
+for (var key in runningBacks) {
+	console.log(key + " ran for " + runningBacks[key] + " yards on that game winning drive!");
+}
 
 // Refactored Code
 
