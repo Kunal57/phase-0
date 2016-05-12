@@ -18,7 +18,7 @@ var scores = [ [80, 70, 70, 100],
 // __________________________________________
 // Write your code below.
 
-
+// Solution 1
 var gradebook = new Object();
 
 gradebook["Joseph"] = {};
@@ -48,6 +48,36 @@ function average(arrayIntegers){
   var average = sum / arrayIntegers.length;
   return average;
 }
+
+// Solution 2
+var gradebook = {};
+
+gradebook["Joseph"] = {};
+gradebook["Susan"] = {};
+gradebook["William"] = {};
+gradebook["Elizabeth"] = {};
+
+gradebook["Joseph"].testScores = scores[0];
+gradebook["Susan"].testScores = scores[1];
+gradebook["William"].testScores = scores[2];
+gradebook["Elizabeth"].testScores = scores[3];
+
+gradebook.addScore = function(name, score){
+  gradebook[name].testScores.push(score);
+};
+
+gradebook.getAverage = function(name) {
+  return average(gradebook[name].testScores)
+};
+
+var average = function(array_of_integers){
+  sum = 0;
+  for(var i = 0; i < array_of_integers.length; i++) {
+    sum += array_of_integers[i];
+  }
+  return sum/array_of_integers.length
+};
+
 
 // __________________________________________
 // Refactored Solution
@@ -79,7 +109,7 @@ function average(arrayIntegers){
 // __________________________________________
 // Reflect
 
-/*
+/**
 1. What did you learn about adding functions to objects?
 
 I learned that functions can be added to objects in the same way that properties are added to objects. A function can be declared within an object by stating the object, followed by a period, and then the name of the function. After specifying the function parameters, you can insert the block of code within the function. The function can be called in the same a property is called. You simply state the function in either dot or bracket notation.
@@ -91,8 +121,8 @@ We iterated over the arrays in JavaScript by using a for loop. The loop allowed 
 3. Were there any new methods you were able to incorporate? If so, what were they and how did they work?
 
 We didn't incorporate any new methods into our solution. We did use the existing method of push to insert a new score to the end of our testScores. Other than methods, the most useful part of this challenge was learning to differentiate the use of dot notation from bracket notation in JavaScript. It helped me understand how each differed and when to use each one. 
+**/
 
-*/
 
 // __________________________________________
 // Test Code:  Do not alter code below this line.
